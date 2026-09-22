@@ -17,7 +17,6 @@ margin:0;
 font-family:Arial,sans-serif;
 background:#080012;
 color:white;
-line-height:1.6;
 }
 
 
@@ -61,24 +60,25 @@ margin-top:25px;
 }
 
 
+
 video{
 
 width:100%;
 border-radius:20px;
-background:black;
+background:#000;
 
 }
 
 
+
 .sound-btn{
 
-margin-top:12px;
+margin-top:10px;
 padding:12px 25px;
-border:none;
 border-radius:30px;
+border:none;
 background:#ffd700;
 font-weight:bold;
-font-size:16px;
 
 }
 
@@ -92,8 +92,8 @@ background:#ffd700;
 color:#000;
 padding:15px 30px;
 border-radius:30px;
-text-decoration:none;
 font-weight:bold;
+text-decoration:none;
 
 }
 
@@ -138,6 +138,7 @@ color:#ffd700;
 input,select{
 
 width:100%;
+box-sizing:border-box;
 padding:15px;
 margin:8px 0;
 border-radius:10px;
@@ -154,10 +155,21 @@ width:100%;
 padding:15px;
 border-radius:30px;
 border:none;
-background:#25D366;
-color:white;
+background:#00e676;
 font-size:18px;
 font-weight:bold;
+
+}
+
+
+
+.result{
+
+display:none;
+background:#102010;
+padding:20px;
+border-radius:20px;
+margin-top:20px;
 
 }
 
@@ -168,14 +180,14 @@ font-weight:bold;
 position:fixed;
 right:20px;
 bottom:20px;
-width:60px;
-height:60px;
+width:65px;
+height:65px;
 background:#25D366;
 border-radius:50%;
 display:flex;
-align-items:center;
 justify-content:center;
-font-size:30px;
+align-items:center;
+font-size:32px;
 text-decoration:none;
 z-index:999;
 
@@ -191,14 +203,15 @@ color:#aaa;
 
 }
 
+
 </style>
 
 
 </head>
 
 
-
 <body>
+
 
 
 <section class="hero">
@@ -250,24 +263,20 @@ onclick="soundOn()">
 </button>
 
 
-
 </div>
 
 
 
 <p>
 
-Setiap hari kita gunakan telefon.
+Setiap perjalanan bermula dengan langkah kecil.
 
-Bagaimana teknologi boleh membantu kita belajar,
-membina network dan berkembang bersama?
+Kenali Eastel Community Malaysia.
 
 </p>
 
 
-
-<a class="btn"
-onclick="openWA()">
+<a class="btn" onclick="scrollForm()">
 
 Saya Nak Kenal Eastel
 
@@ -284,31 +293,22 @@ Saya Nak Kenal Eastel
 const vid=document.getElementById("eastelVideo");
 
 
-
 const observer=new IntersectionObserver((entries)=>{
 
 
-entries.forEach(entry=>{
+entries.forEach(e=>{
 
 
-if(entry.isIntersecting){
+if(e.isIntersecting){
 
 vid.play();
 
 }
 
-else{
-
-vid.pause();
-
-}
-
-
 });
 
 
 });
-
 
 
 observer.observe(vid);
@@ -325,34 +325,20 @@ vid.play();
 
 
 
+function scrollForm(){
+
+document
+.getElementById("lead")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
 </script>
 
   <section class="section">
-
-
-<div class="card">
-
-<h2>Pernah Rasa Macam Ini?</h2>
-
-
-<p>
-❌ Masa banyak habis dengan telefon tetapi tiada perkembangan
-</p>
-
-
-<p>
-❌ Nak cari peluang baru tetapi tidak tahu mula dari mana
-</p>
-
-
-<p>
-❌ Perlukan komuniti yang boleh bimbing dan berkongsi pengalaman
-</p>
-
-
-</div>
-
-
 
 
 
@@ -367,22 +353,31 @@ vid.play();
 
 <p>
 
-Komuniti untuk belajar, bina network dan berkembang bersama.
+Bukan sekadar telefon...
+
+tetapi komuniti untuk belajar, berhubung dan berkembang bersama.
 
 </p>
 
 
 <p>
 
-✅ Support Group
-<br>
 ✅ Sharing ilmu
+
 <br>
-✅ Bimbingan komuniti
+
+✅ Support komuniti
+
 <br>
-✅ Berkembang bersama
+
+✅ Bina network
+
+<br>
+
+✅ Peluang berkembang
 
 </p>
+
 
 
 </div>
@@ -400,13 +395,15 @@ Komuniti untuk belajar, bina network dan berkembang bersama.
 <img src="image/leaders.png">
 
 
+
 <p>
 
-Setiap perjalanan bermula dengan langkah kecil.
+Perjalanan yang besar bermula dengan langkah pertama.
 
-Yang penting ialah mula belajar dan bergerak.
+Belajar, bina hubungan dan bergerak bersama komuniti.
 
 </p>
+
 
 
 </div>
@@ -417,7 +414,7 @@ Yang penting ialah mula belajar dan bergerak.
 
 
 
-<div class="card">
+<div class="card" id="lead">
 
 
 <h2>Saya Nak Kenal Eastel</h2>
@@ -427,7 +424,6 @@ Yang penting ialah mula belajar dan bergerak.
 <form id="leadForm">
 
 
-
 <input 
 id="nama"
 placeholder="Nama anda"
@@ -435,18 +431,18 @@ required>
 
 
 
-<input
+<input 
 id="phone"
 placeholder="No WhatsApp"
-required>
+required
+type="tel">
 
 
 
+<select id="negeri" required>
 
-<select id="negeri">
 
-
-<option>Pilih Negeri</option>
+<option value="">Pilih Negeri</option>
 
 <option>Johor</option>
 <option>Kedah</option>
@@ -470,6 +466,7 @@ required>
 
 
 
+
 <button class="submit">
 
 Hantar Minat
@@ -482,18 +479,81 @@ Hantar Minat
 
 
 
+
+<div class="result" id="success">
+
+
+<h3>Terima kasih 👍</h3>
+
+
+<p>
+
+Maklumat anda telah diterima.
+
+Team Eastel akan hubungi anda.
+
+</p>
+
+
+
+<button class="submit"
+onclick="openWhatsApp()">
+
+💬 Chat WhatsApp
+
+</button>
+
+
+
+</div>
+
+
+
 </div>
 
 
 
 </section>
 
-  <a class="whatsapp"
-onclick="openWA()">
+  <a class="whatsapp" onclick="openWhatsApp()">
 
 💬
 
 </a>
+
+
+
+<div class="section">
+
+
+<div class="card">
+
+
+<h2>📊 Dashboard Lead Eastel</h2>
+
+
+<p>
+Jumlah Lead:
+<span id="totalLead">0</span>
+</p>
+
+
+
+<div id="dashboard">
+
+
+Belum ada lead.
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
 
 
 
@@ -505,26 +565,126 @@ Eastel Community Malaysia 🇲🇾
 
 
 
+
+
 <script>
 
 
-// WhatsApp untuk TikTok browser
-
-function openWA(){
+// SIMPAN LEAD
 
 
-let message =
-"Saya nak kenal Eastel Community Malaysia";
+document
+.getElementById("leadForm")
+.addEventListener("submit",function(e){
 
 
-let url =
-"https://api.whatsapp.com/send?phone=601171608373&text="
-+
-encodeURIComponent(message);
+e.preventDefault();
 
 
 
-window.location.href=url;
+let lead={
+
+
+nama:
+document.getElementById("nama").value,
+
+
+phone:
+document.getElementById("phone").value,
+
+
+negeri:
+document.getElementById("negeri").value,
+
+
+tarikh:
+new Date().toLocaleString("ms-MY")
+
+
+};
+
+
+
+
+let leads=
+JSON.parse(localStorage.getItem("eastelLead"))
+|| [];
+
+
+
+leads.push(lead);
+
+
+
+localStorage.setItem(
+"eastelLead",
+JSON.stringify(leads)
+);
+
+
+
+document
+.getElementById("leadForm")
+.style.display="none";
+
+
+
+document
+.getElementById("success")
+.style.display="block";
+
+
+
+showDashboard();
+
+
+
+});
+
+
+
+
+
+// WHATSAPP FIX
+
+
+function openWhatsApp(){
+
+
+let phone="601171608373";
+
+
+let text=
+"Saya berminat Eastel Community Malaysia";
+
+
+
+let web=
+"https://wa.me/"
++phone+
+"?text="
++encodeURIComponent(text);
+
+
+
+// cuba buka WhatsApp app
+
+
+window.location.href=
+"whatsapp://send?phone="
++phone+
+"&text="
++encodeURIComponent(text);
+
+
+
+setTimeout(function(){
+
+
+window.open(web,"_blank");
+
+
+},1500);
 
 
 
@@ -533,57 +693,83 @@ window.location.href=url;
 
 
 
-// Lead form ke WhatsApp
+
+
+
+// DASHBOARD
+
+
+function showDashboard(){
+
+
+let leads=
+JSON.parse(localStorage.getItem("eastelLead"))
+|| [];
+
+
 
 document
-.getElementById("leadForm")
-.addEventListener("submit",function(e){
+.getElementById("totalLead")
+.innerHTML=
+leads.length;
 
 
 
-e.preventDefault();
+let html="";
 
 
 
-let nama =
-document.getElementById("nama").value;
+leads.reverse().forEach(function(x){
 
 
+html+=`
 
-let phone =
-document.getElementById("phone").value;
-
-
-
-let negeri =
-document.getElementById("negeri").value;
-
+<div style="
+background:#080012;
+padding:15px;
+border-radius:15px;
+margin-top:10px;">
 
 
-let message =
+<b>${x.nama}</b>
 
-"Saya berminat Eastel%0A%0A"
-+
-"Nama: "
-+ nama
-+
-"%0AWhatsApp: "
-+ phone
-+
-"%0ANegeri: "
-+ negeri;
+<br>
+
+📱 ${x.phone}
+
+<br>
+
+📍 ${x.negeri}
+
+<br>
+
+🕒 ${x.tarikh}
 
 
+</div>
 
-window.location.href =
 
-"https://api.whatsapp.com/send?phone=601171608373&text="
-+
-message;
+`;
 
 
 
 });
+
+
+
+document
+.getElementById("dashboard")
+.innerHTML=
+html || "Belum ada lead.";
+
+
+
+}
+
+
+
+
+showDashboard();
 
 
 
