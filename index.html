@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ms">
+
 <head>
 
 <meta charset="UTF-8">
@@ -14,13 +15,12 @@ margin:0;
 font-family:Arial,sans-serif;
 background:#080012;
 color:white;
-line-height:1.6;
 }
 
 .hero{
-padding:35px 20px;
+padding:30px 20px;
 text-align:center;
-background:linear-gradient(180deg,#6500ff,#100020);
+background:linear-gradient(180deg,#7200ff,#100020);
 }
 
 .logo{
@@ -37,25 +37,38 @@ line-height:1.2;
 color:#ffd700;
 }
 
+.video-box{
+margin-top:20px;
+}
+
 video{
 width:100%;
 border-radius:20px;
-margin-top:20px;
+background:black;
+}
+
+.sound-btn{
+margin-top:10px;
+padding:12px 25px;
+border-radius:30px;
+border:none;
+background:#ffd700;
+font-weight:bold;
 }
 
 .btn{
 display:inline-block;
+margin-top:20px;
 background:#ffd700;
-color:#000;
+color:black;
 padding:15px 30px;
 border-radius:30px;
-font-weight:bold;
 text-decoration:none;
-margin-top:20px;
+font-weight:bold;
 }
 
 .section{
-padding:25px 20px;
+padding:20px;
 }
 
 .card{
@@ -74,29 +87,27 @@ h2{
 color:#ffd700;
 }
 
-
 input,select{
 
 width:100%;
 padding:15px;
 margin:8px 0;
 border-radius:10px;
-border:none;
-font-size:16px;
+border:0;
 
 }
 
 
 .submit{
 
+width:100%;
+padding:15px;
+border-radius:30px;
 background:#25D366;
 color:white;
-border:none;
-padding:15px;
-width:100%;
-border-radius:30px;
 font-size:18px;
 font-weight:bold;
+border:0;
 
 }
 
@@ -106,11 +117,10 @@ font-weight:bold;
 position:fixed;
 right:20px;
 bottom:20px;
-background:#25D366;
-color:white;
 width:60px;
 height:60px;
 border-radius:50%;
+background:#25D366;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -120,13 +130,10 @@ z-index:999;
 
 }
 
-
 .footer{
-
 text-align:center;
 padding:30px;
 color:#aaa;
-
 }
 
 </style>
@@ -147,27 +154,48 @@ color:#aaa;
 Telefon Bukan Sekadar Scroll...
 <br>
 <span class="gold">
-Bina Sesuatu Dengan Teknologi
+Jadikan Ia Satu Peluang
 </span>
 </h1>
 
 
-<video autoplay muted loop playsinline controls>
 
-<source src="videos/eastel-emotion.mp4" type="video/mp4">
+<div class="video-box">
+
+
+<video id="eastelVideo"
+playsinline
+muted
+loop
+preload="auto">
+
+<source src="videos/eastel-emotion.mp4"
+type="video/mp4">
 
 </video>
 
 
+<button class="sound-btn"
+onclick="soundOn()">
+
+🔊 Dengar Suara
+
+</button>
+
+
+</div>
+
+
+
 <p>
 Setiap hari kita gunakan telefon.
-Tetapi bagaimana kalau teknologi boleh membantu kita belajar,
+Bagaimana teknologi boleh membantu kita belajar,
 membina network dan berkembang bersama?
 </p>
 
 
 <a class="btn"
-href="https://wa.me/601171608373?text=Saya%20nak%20kenal%20Eastel">
+href="https://api.whatsapp.com/send?phone=601171608373&text=Saya%20nak%20kenal%20Eastel">
 
 Saya Nak Kenal Eastel
 
@@ -177,7 +205,43 @@ Saya Nak Kenal Eastel
 </section>
 
 
+<script>
 
+const vid=document.getElementById("eastelVideo");
+
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+vid.play();
+
+}else{
+
+vid.pause();
+
+}
+
+});
+
+});
+
+
+observer.observe(vid);
+
+
+
+function soundOn(){
+
+vid.muted=false;
+vid.play();
+
+}
+
+
+</script>
 <section class="section">
 
 
@@ -185,11 +249,11 @@ Saya Nak Kenal Eastel
 
 <h2>Pernah Rasa Macam Ini?</h2>
 
-<p>❌ Banyak masa di telefon tetapi tiada perkembangan.</p>
+<p>❌ Masa banyak habis dengan telefon tetapi tiada perkembangan</p>
 
-<p>❌ Mahu belajar sesuatu baru tetapi tidak tahu mula.</p>
+<p>❌ Nak cari peluang baru tetapi tidak tahu mula dari mana</p>
 
-<p>❌ Perlukan komuniti untuk bimbingan.</p>
+<p>❌ Perlukan komuniti yang boleh bimbing dan berkongsi pengalaman</p>
 
 </div>
 
@@ -202,72 +266,98 @@ Saya Nak Kenal Eastel
 <img src="image/community-malaysia.png">
 
 <p>
-Komuniti untuk belajar, berkongsi pengalaman dan berkembang bersama.
+Komuniti untuk belajar, bina network dan berkembang bersama.
 </p>
+
 
 <p>
 ✅ Support Group
 <br>
 ✅ Sharing ilmu
 <br>
-✅ Networking
+✅ Bimbingan komuniti
+<br>
+✅ Berkembang bersama
 </p>
+
 
 </div>
 
 
 
+
 <div class="card">
 
-<h2>Leader & Komuniti</h2>
+<h2>Leader Eastel</h2>
 
 <img src="image/leaders.png">
 
+
 <p>
-Setiap perjalanan bermula dengan langkah kecil.
+Semua orang bermula dengan langkah kecil.
+Yang penting ialah mula belajar dan bergerak.
 </p>
 
 </div>
 
 
 
+
+
 <div class="card">
 
-<h2>Kenali Eastel</h2>
 
-<form>
+<h2>Saya Nak Kenal Eastel</h2>
 
-<input placeholder="Nama">
 
-<input placeholder="No WhatsApp">
+<form id="leadForm">
 
-<select>
+
+<input id="nama"
+placeholder="Nama anda"
+required>
+
+
+<input id="phone"
+placeholder="No WhatsApp"
+required>
+
+
+<select id="negeri">
 
 <option>Pilih Negeri</option>
 <option>Johor</option>
 <option>Kuala Lumpur</option>
-<option>Penang</option>
 <option>Selangor</option>
+<option>Penang</option>
+<option>Sabah</option>
+<option>Sarawak</option>
 
 </select>
 
 
+
 <button class="submit">
-Saya Berminat
+
+Hantar Minat
+
 </button>
 
 
 </form>
 
+
 </div>
+
 
 
 </section>
 
 
 
+
 <a class="whatsapp"
-href="https://wa.me/601171608373?text=Saya%20nak%20tahu%20tentang%20Eastel">
+href="https://api.whatsapp.com/send?phone=601171608373&text=Saya%20nak%20kenal%20Eastel">
 
 💬
 
@@ -275,13 +365,59 @@ href="https://wa.me/601171608373?text=Saya%20nak%20tahu%20tentang%20Eastel">
 
 
 
+
+
 <footer class="footer">
 
-Eastel Community Malaysia 🇲🇾
+Eastel Community Malaysia © 2026
 
 </footer>
+
+
+
+
+<script>
+
+
+document.getElementById("leadForm")
+.addEventListener("submit",function(e){
+
+
+e.preventDefault();
+
+
+
+let nama=document.getElementById("nama").value;
+
+let phone=document.getElementById("phone").value;
+
+
+let negeri=document.getElementById("negeri").value;
+
+
+
+let msg=
+"Saya berminat Eastel%0A"+
+"Nama: "+nama+
+"%0AWhatsApp: "+phone+
+"%0ANegeri: "+negeri;
+
+
+
+window.location.href=
+"https://api.whatsapp.com/send?phone=601171608373&text="+msg;
+
+
+
+});
+
+
+
+</script>
+
 
 
 </body>
 
 </html>
+  
