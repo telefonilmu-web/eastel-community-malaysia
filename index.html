@@ -39,9 +39,14 @@
         Eastel Community
       </span>
     </div>
-    <a href="#daftar" class="bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-full transition shadow-lg shadow-purple-900/40">
-      Daftar Dealer
-    </a>
+    <div class="flex items-center gap-3">
+      <a href="https://wa.me/601171608373?text=Salam%20Admin%20Eastel,%20saya%20nak%20tanya%20tentang%20pendaftaran%20Dealer" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-4 py-2 rounded-full transition shadow-md">
+        <span>WhatsApp: 011-71608373</span>
+      </a>
+      <a href="#daftar" class="bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-full transition shadow-lg shadow-purple-900/40">
+        Daftar Dealer
+      </a>
+    </div>
   </nav>
 
   <!-- HERO SECTION -->
@@ -64,16 +69,22 @@
         <a href="#daftar" class="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-pink-600/25 text-base sm:text-lg transition transform hover:-translate-y-0.5 text-center">
           🚀 Mula Jana Pendapatan Pasif
         </a>
-        <a href="#pelan" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-6 py-4 rounded-xl transition text-center text-base">
-          Lihat Pakej Data
+        <a href="https://wa.me/601171608373?text=Salam%20Admin%20Eastel,%20saya%20berminat%20nak%20tahu%20maklumat%20lanjut" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-4 rounded-xl transition text-center text-base shadow-lg shadow-emerald-950/40">
+          💬 Chat WhatsApp Terus
         </a>
       </div>
 
-      <!-- VIDEO (Atribut muted dikekalkan supaya autoplay berjalan lancar di semua pelayar web) -->
-      <div class="mt-12 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl max-w-2xl mx-auto bg-black/60 aspect-video">
-        <video loop muted autoplay playsinline preload="auto" class="w-full h-full object-cover">
+      <!-- VIDEO BESERTA BUTANG UNMUTE -->
+      <div class="relative mt-12 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl max-w-2xl mx-auto bg-black/60 aspect-video group">
+        <video id="eastelVideo" loop muted autoplay playsinline preload="auto" class="w-full h-full object-cover">
           <source src="videos/eastel-emotion.mp4" type="video/mp4">
         </video>
+
+        <!-- Butang Unmute / Suara Video -->
+        <button id="unmuteBtn" type="button" class="absolute bottom-4 right-4 z-20 flex items-center gap-2 bg-slate-900/90 hover:bg-purple-600 text-white text-xs sm:text-sm font-bold py-2 px-4 rounded-full border border-purple-400/50 shadow-xl backdrop-blur-md transition-all duration-200">
+          <span id="soundIcon">🔊</span>
+          <span id="soundText">Buka Suara Video</span>
+        </button>
       </div>
     </div>
   </header>
@@ -208,58 +219,58 @@
     </div>
   </section>
 
-  <!-- BUKTI PENDAPATAN LEADER (MENGGUNAKAN image/leaders.png) -->
-  <section class="py-16 px-5 bg-slate-900/60 border-t border-slate-800">
+  <!-- KISAH LEADER (GUNA image/leaders.png) -->
+  <section class="py-16 px-5 bg-slate-900/70 border-t border-slate-800">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12">
-        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider bg-amber-950/60 px-3 py-1 rounded-full border border-amber-500/30">Kisah Kejayaan Sebenar</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-4 mb-3">Bermula Dari Kosong (RM0), Ini Lonjakan Pendapatan Leader Kami</h2>
-        <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto">Semua leader hebat bermula tanpa pengalaman. Lihat bagaimana sistem Eastel membimbing ahli membina pendapatan pasif dari asas.</p>
+        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider bg-amber-950/60 px-3 py-1 rounded-full border border-amber-500/30">Bimbingan Leader Sebenar</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-4 mb-3">Belum Ada Pengalaman? Belum Ada Pendapatan Sampingan?</h2>
+        <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto">Leader Eastel kami juga bermula daripada tiada apa-apa asas (RM0). Dengan bimbingan komuniti, sesiapa pun mampu membina pendapatan pasif sendiri!</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8 items-center">
-        <!-- Gambar Leader (leaders.png) -->
+        <!-- Gambar Leader -->
         <div class="rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-950">
-          <img src="image/leaders.png" alt="Leader Eastel Community" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/600x400/1e1b4b/white?text=Eastel+Leaders'" />
+          <img src="image/leaders.png" alt="Barisan Leader Eastel Community" class="w-full h-auto object-cover" onerror="this.src='image/community-malaysia.png'" />
         </div>
 
-        <!-- Jadual / Carta Pertumbuhan Pendapatan Bermula Dari 0 -->
+        <!-- Perjalanan Dari RM0 ke Pasif Income -->
         <div class="space-y-4">
           <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 flex items-center justify-between">
             <div>
-              <div class="text-xs text-slate-400 font-semibold uppercase">Bulan Pertama (Mula)</div>
-              <div class="text-lg font-bold text-white">Bermula dari Peringkat Asas</div>
+              <div class="text-xs text-amber-400 font-semibold uppercase">Tahap 1: Belum Ada Pendapatan (RM0)</div>
+              <div class="text-base sm:text-lg font-bold text-white">Mula Dengan Modal RM10</div>
+              <p class="text-xs text-slate-400 mt-1">Daftar dealer dan terus dibimbing dalam group sokongan.</p>
             </div>
-            <div class="text-right">
-              <span class="text-amber-400 font-extrabold text-lg">RM 0</span>
-              <div class="text-[11px] text-slate-500">Daftar Dealer RM10</div>
+            <div class="text-right pl-3">
+              <span class="text-amber-400 font-extrabold text-lg">Mula RM0</span>
             </div>
           </div>
 
           <div class="bg-slate-950 p-5 rounded-xl border border-purple-900/50 flex items-center justify-between">
             <div>
-              <div class="text-xs text-purple-400 font-semibold uppercase">Bulan ke-3</div>
-              <div class="text-lg font-bold text-white">Kumpul 15–30 Pengguna Aktif</div>
+              <div class="text-xs text-purple-400 font-semibold uppercase">Tahap 2: Mula Rasa Hasil</div>
+              <div class="text-base sm:text-lg font-bold text-white">Kongsi Kepada 10-20 Kenalan</div>
+              <p class="text-xs text-slate-400 mt-1">Bantu rakan jimat kuota 300GB, komisen mula mengalir.</p>
             </div>
-            <div class="text-right">
-              <span class="text-purple-300 font-extrabold text-xl">RM 350 - RM 600</span>
-              <div class="text-[11px] text-purple-400">Komisen Topup Masuk</div>
+            <div class="text-right pl-3">
+              <span class="text-purple-300 font-extrabold text-lg sm:text-xl">RM300 - RM600</span>
             </div>
           </div>
 
           <div class="bg-slate-950 p-5 rounded-xl border border-pink-900/50 flex items-center justify-between">
             <div>
-              <div class="text-xs text-pink-400 font-semibold uppercase">Bulan ke-6 dan Seterusnya</div>
-              <div class="text-lg font-bold text-white">Rangkaian 3-Aras Berkembang</div>
+              <div class="text-xs text-pink-400 font-semibold uppercase">Tahap 3: Pasif Income Berterusan</div>
+              <div class="text-base sm:text-lg font-bold text-white">Rangkaian 3-Aras Berkembang</div>
+              <p class="text-xs text-slate-400 mt-1">Komisen 13% - 3% - 8% masuk setiap bulan secara automatik.</p>
             </div>
-            <div class="text-right">
-              <span class="text-pink-400 font-extrabold text-xl">RM 1,500 - RM 4,500+</span>
-              <div class="text-[11px] text-pink-400">Pendapatan Pasif Berulang</div>
+            <div class="text-right pl-3">
+              <span class="text-pink-400 font-extrabold text-lg sm:text-xl">RM1,500+ /bln</span>
             </div>
           </div>
 
-          <p class="text-xs text-slate-400 italic pt-2">
-            * Nota: Pendapatan bergantung kepada usaha peribadi dan aktiviti topup bulanan rangkaian di bawah anda.
+          <p class="text-xs text-slate-400 italic pt-1">
+            💡 Hubungi admin kami di talian <strong>011-71608373</strong> untuk mendapatkan panduan pendaftaran Dealer secara eksklusif.
           </p>
         </div>
       </div>
@@ -294,42 +305,12 @@
     </div>
   </section>
 
-  <!-- KOMUNITI & SOKONGAN -->
-  <section class="py-16 px-5 max-w-5xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <span class="text-purple-400 text-xs font-bold uppercase tracking-wider bg-purple-950 px-3 py-1 rounded-full border border-purple-800/40">Sistem Sokongan Penuh</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-4 mb-4">Anda Tidak Bergerak Sendirian</h2>
-        <p class="text-slate-300 text-sm sm:text-base mb-6 leading-relaxed">
-          Ramai takut berniaga kerana tiada bimbingan. Di <strong>Eastel Community Malaysia</strong>, anda terus dibekalkan sistem lengkap untuk bermula:
-        </p>
-        <ul class="space-y-3.5 text-slate-300 text-sm">
-          <li class="flex items-start gap-3">
-            <span class="text-emerald-400 font-bold mt-0.5">✓</span>
-            <div><strong>Group Bimbingan WhatsApp & Telegram:</strong> Panduan terus daripada leader telco berpengalaman.</div>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-emerald-400 font-bold mt-0.5">✓</span>
-            <div><strong>Bahan Pemasaran Siap Pakai:</strong> Gambar grafik berkualiti, video promosi, serta skrip jualan yang sedia disalin dan ditampal.</div>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-emerald-400 font-bold mt-0.5">✓</span>
-            <div><strong>Sistem Link Affiliate:</strong> Urusan pendaftaran prospek anda direkod secara tersusun secara online.</div>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <img src="image/community-malaysia.png" alt="Eastel Community Malaysia" class="rounded-2xl border border-slate-800 shadow-2xl w-full object-cover" onerror="this.src='image/leaders.png'" />
-      </div>
-    </div>
-  </section>
-
   <!-- BORANG PENDAFTARAN -->
   <section id="daftar" class="py-16 px-5 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-800">
     <div class="max-w-xl mx-auto bg-slate-900 border border-purple-500/40 p-7 sm:p-10 rounded-3xl shadow-2xl relative">
       <div class="text-center mb-8">
         <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">Daftar & Mula Sekarang</h2>
-        <p class="text-slate-400 text-xs sm:text-sm">Isi butiran ringkas di bawah. Anda akan dibawa terus ke WhatsApp admin untuk pengaktifan simkad.</p>
+        <p class="text-slate-400 text-xs sm:text-sm">Isi butiran ringkas di bawah. Anda akan dibawa terus ke WhatsApp admin (<strong>011-71608373</strong>) untuk pengaktifan simkad.</p>
       </div>
 
       <form id="leadForm" class="space-y-4">
@@ -339,8 +320,8 @@
         </div>
 
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">Nombor WhatsApp</label>
-          <input type="tel" id="telefon" required placeholder="Contoh: 0112345678" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-purple-500 transition" />
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">Nombor WhatsApp Anda</label>
+          <input type="tel" id="telefon" required placeholder="Contoh: 0123456789" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-purple-500 transition" />
         </div>
 
         <div>
@@ -363,7 +344,7 @@
         <div class="text-4xl mb-2">🎉</div>
         <h3 class="text-xl font-bold text-white mb-2">Maklumat Berjaya Dihantar!</h3>
         <p class="text-slate-300 text-sm mb-5">Sila klik butang di bawah jika aplikasi WhatsApp anda tidak dibuka secara automatik:</p>
-        <a id="btnBukaWA" href="#" target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition">
+        <a id="btnBukaWA" href="https://wa.me/601171608373" target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition">
           Terus Chat Admin di WhatsApp 💬
         </a>
       </div>
@@ -373,22 +354,47 @@
   <!-- FOOTER -->
   <footer class="py-8 text-center text-slate-500 text-xs border-t border-slate-900 bg-slate-950 px-5">
     <p class="mb-2">© 2026 Eastel Community Malaysia. Hak Cipta Terpelihara.</p>
-    <p class="max-w-xl mx-auto leading-relaxed">Eastel merupakan jenama telekomunikasi MVNO berlesen di bawah kawal selia SKMM, beroperasi atas liputan rangkaian 5G U Mobile.</p>
+    <p class="max-w-xl mx-auto leading-relaxed">Eastel merupakan jenama telekomunikasi MVNO berlesen di bawah kawal selia SKMM, beroperasi atas liputan rangkaian 5G U Mobile. Hubungi admin: 011-71608373.</p>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON (Nombor WhatsApp: 01171608373) -->
-  <a id="floatingWA" href="#" target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl shadow-emerald-950/60 flex items-center justify-center transition transform hover:scale-110 z-50">
+  <!-- FLOATING WHATSAPP BUTTON (Nomor WhatsApp: 01171608373) -->
+  <a id="floatingWA" href="https://wa.me/601171608373?text=Salam%20Admin%20Eastel,%20saya%20berminat%20nak%20tahu%20maklumat%20lanjut%20mengenai%20simkad%20dan%20peluang%20bisnes" target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl shadow-emerald-950/60 flex items-center justify-center transition transform hover:scale-110 z-50">
     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
       <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
     </svg>
   </a>
 
-  <!-- LOGIK BORANG KE WHATSAPP -->
+  <!-- LOGIK BORANG KE WHATSAPP & TOGGLE SUARA VIDEO -->
   <script>
     const NOMBOR_ADMIN = "601171608373";
 
+    // Pautan Floating WhatsApp
     document.getElementById('floatingWA').href = `https://wa.me/${NOMBOR_ADMIN}?text=${encodeURIComponent("Salam Admin Eastel, saya berminat nak tahu maklumat lanjut mengenai simkad dan peluang bisnes.")}`;
 
+    // Fungsi Toggle Unmute / Senyapkan Suara Video
+    const video = document.getElementById('eastelVideo');
+    const unmuteBtn = document.getElementById('unmuteBtn');
+    const soundIcon = document.getElementById('soundIcon');
+    const soundText = document.getElementById('soundText');
+
+    unmuteBtn.addEventListener('click', function() {
+      if (video.muted) {
+        video.muted = false;
+        video.play();
+        soundIcon.textContent = '🔇';
+        soundText.textContent = 'Senyapkan Suara';
+        unmuteBtn.classList.remove('bg-slate-900/90');
+        unmuteBtn.classList.add('bg-purple-600');
+      } else {
+        video.muted = true;
+        soundIcon.textContent = '🔊';
+        soundText.textContent = 'Buka Suara Video';
+        unmuteBtn.classList.remove('bg-purple-600');
+        unmuteBtn.classList.add('bg-slate-900/90');
+      }
+    });
+
+    // Logik Penghantaran Borang ke WhatsApp
     const form = document.getElementById('leadForm');
     const statusSukses = document.getElementById('statusSukses');
     const btnBukaWA = document.getElementById('btnBukaWA');
