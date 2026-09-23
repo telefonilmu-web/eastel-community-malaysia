@@ -26,7 +26,7 @@
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-purple-500 selection:text-white">
 
-  <!-- TOP ANNOUNCEMENT BAR -->
+  <!-- TOP BAR -->
   <div class="bg-gradient-to-r from-purple-700 via-pink-600 to-amber-500 text-center py-2 px-4 text-xs sm:text-sm font-semibold tracking-wide">
     🔥 Peluang Terawal 2026: Jadi Dealer Telco 5G Eastel di Kawasan Anda Bermula RM10!
   </div>
@@ -40,9 +40,9 @@
       </span>
     </div>
     <div class="flex items-center gap-3">
-      <a href="whatsapp://send?phone=601171608373&text=Salam%20Admin%20Eastel,%20saya%20nak%20tanya%20tentang%20pendaftaran%20Dealer" class="hidden sm:inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-4 py-2 rounded-full transition shadow-md">
+      <button type="button" onclick="handleWhatsAppRedirect('Salam Admin Eastel, saya nak tanya tentang pendaftaran Dealer')" class="hidden sm:inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-4 py-2 rounded-full transition shadow-md cursor-pointer">
         <span>WhatsApp: 011-71608373</span>
-      </a>
+      </button>
       <a href="#daftar" class="bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-full transition shadow-lg shadow-purple-900/40">
         Daftar Dealer
       </a>
@@ -69,12 +69,12 @@
         <a href="#daftar" class="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-pink-600/25 text-base sm:text-lg transition transform hover:-translate-y-0.5 text-center">
           🚀 Mula Jana Pendapatan Pasif
         </a>
-        <button type="button" onclick="openWhatsAppDirect('Salam Admin Eastel, saya berminat nak tahu info simkad dan bisnes')" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-4 rounded-xl transition text-center text-base shadow-lg shadow-emerald-950/40 cursor-pointer">
+        <button type="button" onclick="handleWhatsAppRedirect('Salam Admin Eastel, saya berminat nak tahu maklumat lanjut mengenai simkad dan peluang bisnes.')" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-4 rounded-xl transition text-center text-base shadow-lg shadow-emerald-950/40 cursor-pointer">
           💬 Chat WhatsApp: 011-71608373
         </button>
       </div>
 
-      <!-- VIDEO SECTION DAN TOMBOL BUKA SUARA -->
+      <!-- VIDEO SECTION DAN BUTANG BUKA SUARA -->
       <div class="mt-12 max-w-2xl mx-auto">
         <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-black aspect-video">
           <video id="eastelVideo" loop muted autoplay playsinline controls preload="auto" class="w-full h-full object-cover">
@@ -82,19 +82,18 @@
           </video>
         </div>
 
-        <!-- Tombol Buka Suara (Di luar frame video agar mudah ditekan) -->
         <div class="mt-4 flex flex-col items-center justify-center">
           <button id="unmuteBtn" type="button" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-amber-400 via-pink-500 to-purple-600 hover:opacity-95 text-slate-950 font-black px-8 py-3.5 rounded-full shadow-xl shadow-pink-600/30 text-sm sm:text-base transition transform hover:scale-105 active:scale-95 cursor-pointer">
             <span id="soundIcon" class="text-xl">🔊</span>
-            <span id="soundText" class="font-extrabold tracking-wide">KLIK UNTUK AKTIFKAN SUARA VIDEO</span>
+            <span id="soundText" class="font-extrabold tracking-wide">KLIK UNTUK BUKA SUARA VIDEO</span>
           </button>
-          <p class="text-xs text-slate-400 mt-2">Atau gunakan ikon speaker pada pemutar video di atas.</p>
+          <p class="text-xs text-slate-400 mt-2">Atau tekan ikon pembesar suara pada video di atas.</p>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- SEKSYEN PERBANDINGAN: BIASA VS EASTEL -->
+  <!-- SEKSYEN PERBANDINGAN -->
   <section class="py-16 px-5 bg-slate-900/90 border-y border-slate-800">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12">
@@ -342,21 +341,16 @@
         <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-pink-600/30 text-base transition transform hover:-translate-y-0.5 mt-2 cursor-pointer">
           Hantar & Berhubung di WhatsApp ➔
         </button>
-
-        <!-- Panduan khusus pengunjung TikTok -->
-        <p class="text-[11px] text-slate-400 text-center mt-3 leading-relaxed">
-          📌 <em>Jika dibuka dari TikTok dan aplikasi WhatsApp tidak terbuka otomatis, tekan <strong>tiga titik (...) di pojok kanan atas</strong> lalu pilih <strong>Buka di Browser Eksternal</strong>.</em>
-        </p>
       </form>
 
       <!-- Paparan Notis Pengesahan Selepas Hantar -->
       <div id="statusSukses" class="hidden text-center py-6">
         <div class="text-4xl mb-2">🎉</div>
         <h3 class="text-xl font-bold text-white mb-2">Maklumat Berjaya Dihantar!</h3>
-        <p class="text-slate-300 text-sm mb-5">Sila klik butang di bawah jika aplikasi WhatsApp anda tidak dibuka secara automatik:</p>
-        <a id="btnBukaWA" href="whatsapp://send?phone=601171608373" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition">
+        <p class="text-slate-300 text-sm mb-5">Sila klik butang di bawah untuk berhubung terus dengan admin:</p>
+        <button id="btnBukaWA" type="button" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition cursor-pointer">
           Terus Chat Admin di WhatsApp 💬
-        </a>
+        </button>
       </div>
     </div>
   </section>
@@ -367,42 +361,83 @@
     <p class="max-w-xl mx-auto leading-relaxed">Eastel merupakan jenama telekomunikasi MVNO berlesen di bawah kawal selia SKMM, beroperasi atas liputan rangkaian 5G U Mobile. Hubungi admin: 011-71608373.</p>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON (DEEP LINK PROTOKOL) -->
-  <a id="floatingWA" href="#" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl shadow-emerald-950/60 flex items-center justify-center transition transform hover:scale-110 z-50">
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <button id="floatingWA" type="button" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl shadow-emerald-950/60 flex items-center justify-center transition transform hover:scale-110 z-50 cursor-pointer">
     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
       <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
     </svg>
-  </a>
+  </button>
 
-  <!-- SCRIPT LOGIKA PENGATUR SUARA VIDEO, BYPASS TIKTOK, DAN BORANG -->
+  <!-- MODAL PANDUAN PENGGUNA TIKTOK (HANYA MUNCUL BILA PELAWAT GUNA TIKTOK BROWSER) -->
+  <div id="tiktokModal" class="hidden fixed inset-0 z-[100] bg-black/85 backdrop-blur-sm flex items-center justify-center p-5">
+    <div class="bg-slate-900 border-2 border-pink-500 rounded-3xl max-w-sm w-full p-6 text-center shadow-2xl relative animate-bounce-short">
+      <div class="text-4xl mb-2">👆</div>
+      <h3 class="text-xl font-extrabold text-white mb-2">Langkah Mudah Buka WhatsApp</h3>
+      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+        Disebabkan anda sedang melayari melalui aplikasi TikTok, sila tekan <strong>tiga titik (...) di penjuru atas kanan skrin</strong> dan pilih:
+      </p>
+      <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-amber-400 font-bold text-sm mb-4">
+        🌐 "Open in browser" / "Buka di Pelayar"
+      </div>
+      <p class="text-slate-400 text-xs mb-5">Atau salin nombor admin di bawah untuk terus WhatsApp:</p>
+
+      <div class="flex flex-col gap-2.5">
+        <button type="button" onclick="salinNomborAdmin()" class="bg-purple-600 hover:bg-purple-500 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition">
+          📋 Salin Nombor: 011-71608373
+        </button>
+        <button type="button" onclick="tutupTikTokModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold py-2.5 px-4 rounded-xl text-xs transition">
+          Tutup Panduan Ini
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT PENGATUR SUARA VIDEO, PENDAFTARAN & BYPASS TIKTOK -->
   <script>
     const NOMBOR_ADMIN = "601171608373";
 
-    // Fungsi pintar: Buka aplikasi WhatsApp secara langsung (By-pass browser TikTok)
-    function openWhatsAppDirect(pesanTeks) {
-      const encodedMsg = encodeURIComponent(pesanTeks);
-      const deepLink = `whatsapp://send?phone=${NOMBOR_ADMIN}&text=${encodedMsg}`;
-      const webLink = `https://wa.me/${NOMBOR_ADMIN}?text=${encodedMsg}`;
-
-      // Coba luncurkan aplikasi WhatsApp secara langsung
-      window.location.href = deepLink;
-
-      // Fallback cadangan: Jika dalam 1.2 detik aplikasi tidak merespons, buka via web link
-      setTimeout(() => {
-        window.location.href = webLink;
-      }, 1200);
+    // Semak sama ada pelawat sedang membuka laman melalui TikTok In-App Browser
+    function isTikTokBrowser() {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      return /musical_ly|ByteLocale|TikTok/i.test(ua);
     }
 
-    // Tombol Floating WhatsApp
-    const floatingBtn = document.getElementById('floatingWA');
-    if (floatingBtn) {
-      floatingBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        openWhatsAppDirect("Salam Admin Eastel, saya berminat nak tahu maklumat lanjut mengenai simkad dan peluang bisnes.");
+    // Fungsi Pengendalian WhatsApp yang Selamat (Bebas Ralat Action can't be completed)
+    function handleWhatsAppRedirect(pesanTeks) {
+      const encodedMsg = encodeURIComponent(pesanTeks);
+      const urlWhatsApp = `https://api.whatsapp.com/send?phone=${NOMBOR_ADMIN}&text=${encodedMsg}`;
+
+      if (isTikTokBrowser()) {
+        // Jika dalam TikTok, buka pautan rasmi & paparkan panduan 3-titik
+        window.open(urlWhatsApp, '_blank');
+        document.getElementById('tiktokModal').classList.remove('hidden');
+      } else {
+        // Pelayar luar biasa (Chrome/Safari), terus buka WhatsApp
+        window.location.href = urlWhatsApp;
+      }
+    }
+
+    function tutupTikTokModal() {
+      document.getElementById('tiktokModal').classList.add('hidden');
+    }
+
+    function salinNomborAdmin() {
+      navigator.clipboard.writeText("01171608373").then(() => {
+        alert("Nombor 011-71608373 berjaya disalin! Sila buka aplikasi WhatsApp anda dan tampal nombor ini.");
+      }).catch(() => {
+        alert("Nombor telefon: 011-71608373");
       });
     }
 
-    // Tombol Buka Suara Video
+    // Butang WhatsApp Terapung
+    const floatingBtn = document.getElementById('floatingWA');
+    if (floatingBtn) {
+      floatingBtn.addEventListener('click', function() {
+        handleWhatsAppRedirect("Salam Admin Eastel, saya berminat nak tahu maklumat lanjut mengenai simkad dan peluang bisnes.");
+      });
+    }
+
+    // Butang Buka Suara Video
     const video = document.getElementById('eastelVideo');
     const unmuteBtn = document.getElementById('unmuteBtn');
     const soundIcon = document.getElementById('soundIcon');
@@ -421,17 +456,18 @@
         } else {
           video.muted = true;
           soundIcon.textContent = '🔊';
-          soundText.textContent = 'KLIK UNTUK AKTIFKAN SUARA VIDEO';
+          soundText.textContent = 'KLIK UNTUK BUKA SUARA VIDEO';
           unmuteBtn.classList.remove('text-white');
           unmuteBtn.classList.add('text-slate-950');
         }
       });
     }
 
-    // Penanganan Formulir WhatsApp
+    // Pengendalian Borang Pendaftaran
     const form = document.getElementById('leadForm');
     const statusSukses = document.getElementById('statusSukses');
     const btnBukaWA = document.getElementById('btnBukaWA');
+    let mesejTerkumpul = "";
 
     if (form) {
       form.addEventListener('submit', function(e) {
@@ -441,16 +477,18 @@
         const telefon = document.getElementById('telefon').value.trim();
         const pilihan = document.getElementById('pilihan').value;
 
-        const pesan = `Salam Admin Eastel Community Malaysia,\n\nSaya berminat untuk mendaftar:\n👤 Nama: ${nama}\n📱 No Telefon: ${telefon}\n🎯 Pakej/Pilihan: ${pilihan}\n\nMohon bantuan pendaftaran. Terima kasih!`;
-        
-        // Tetapkan tautan konfirmasi
-        btnBukaWA.href = `whatsapp://send?phone=${NOMBOR_ADMIN}&text=${encodeURIComponent(pesan)}`;
+        mesejTerkumpul = `Salam Admin Eastel Community Malaysia,\n\nSaya berminat untuk mendaftar:\n👤 Nama: ${nama}\n📱 No Telefon: ${telefon}\n🎯 Pakej/Pilihan: ${pilihan}\n\nMohon bantuan pendaftaran. Terima kasih!`;
         
         form.classList.add('hidden');
         statusSukses.classList.remove('hidden');
 
-        // Panggil aplikasi WhatsApp secara otomatis
-        openWhatsAppDirect(pesan);
+        handleWhatsAppRedirect(mesejTerkumpul);
+      });
+    }
+
+    if (btnBukaWA) {
+      btnBukaWA.addEventListener('click', function() {
+        handleWhatsAppRedirect(mesejTerkumpul || "Salam Admin Eastel, saya nak daftar Dealer.");
       });
     }
   </script>
