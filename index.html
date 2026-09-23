@@ -1,224 +1,263 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="ms" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eastel Community Malaysia | Internet 5G & Peluang Pendapatan Pasif</title>
-  <meta name="description" content="Tukar perbelanjaan simkad menjadi pendapatan pasif berulang bersama Eastel Community Malaysia. Nikmati internet 5G kuota besar serendah RM10!" />
+  <title>Eastel Community Malaysia | Simkad 5G & Peluang Jana Pendapatan Pasif</title>
+  <meta name="description" content="Tukar bil bulanan telefon kepada punca pendapatan pasif berulang bersama Eastel Community Malaysia. Pelan data besar sehingga 999GB, modal mula serendah RM10!" />
+  
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .gradient-hero {
-      background: linear-gradient(135deg, #0b0f19 0%, #1e1b4b 50%, #311042 100%);
+    .hero-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(168, 85, 247, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
     }
-    .badge-glow {
-      box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+    .badge-pulse {
+      box-shadow: 0 0 15px rgba(236, 72, 153, 0.35);
     }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-purple-500 selection:text-white">
 
-  <!-- TOP ANNOUNCEMENT BAR -->
-  <div class="bg-gradient-to-r from-purple-600 to-pink-600 text-center py-2 px-4 text-xs md:text-sm font-semibold tracking-wide">
-    🔥 Pelancaran Rangkaian 5G Eastel: Peluang Terawal Menjadi Dealer Kawasan Anda!
+  <!-- TOP BAR -->
+  <div class="bg-gradient-to-r from-purple-700 via-pink-600 to-amber-500 text-center py-2 px-4 text-xs sm:text-sm font-semibold tracking-wide">
+    🔥 Peluang Terawal 2026: Jadi Dealer Telco 5G Eastel di Kawasan Anda Bermula RM10!
   </div>
 
   <!-- NAVIGATION -->
-  <header class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+  <nav class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between border-b border-slate-800/80">
     <div class="flex items-center gap-3">
-      <img src="image/logo-eastel.jpg" alt="Logo Eastel" class="h-10 w-auto rounded-lg shadow-md border border-slate-700" onerror="this.src='https://via.placeholder.com/120x40?text=EASTEL'" />
-      <span class="font-extrabold text-lg md:text-xl tracking-tight bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+      <img src="image/logo-eastel.jpg" alt="Eastel Logo" class="h-10 w-auto rounded-lg shadow-sm border border-slate-700" onerror="this.src='https://placehold.co/120x40/7e22ce/white?text=EASTEL'" />
+      <span class="font-extrabold text-lg sm:text-xl tracking-tight bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
         Eastel Community
       </span>
     </div>
-    <a href="#daftar" class="hidden sm:inline-block bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm px-5 py-2.5 rounded-full transition duration-200 shadow-lg shadow-purple-900/40">
-      Daftar Dealer (RM10)
+    <a href="#daftar" class="bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-full transition shadow-lg shadow-purple-900/40">
+      Daftar Dealer
     </a>
-  </header>
+  </nav>
 
   <!-- HERO SECTION -->
-  <section class="gradient-hero relative pt-12 pb-20 px-6 overflow-hidden">
+  <header class="hero-glow relative pt-10 pb-16 px-5 overflow-hidden">
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <div class="inline-flex items-center gap-2 bg-purple-950/80 border border-purple-500/40 px-4 py-1.5 rounded-full text-purple-300 text-xs md:text-sm font-medium mb-6 badge-glow">
-        <span>⚡ Dikuasakan Liputan 5G & 4G Seluruh Malaysia</span>
+      <div class="inline-flex items-center gap-2 bg-purple-950/80 border border-purple-500/40 px-4 py-1.5 rounded-full text-purple-300 text-xs sm:text-sm font-medium mb-6 badge-pulse">
+        <span>⚡ Dikuasakan Liputan 5G/4G Terpantas Seluruh Malaysia</span>
       </div>
-      
-      <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight md:leading-tight mb-6">
-        Jangan Sekadar Jadi <span class="text-rose-400">Pembayar Bil</span>.<br />
-        Tukar Simkad Menjadi <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-amber-300 bg-clip-text text-transparent">Mesin Pendapatan Pasif!</span>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight sm:leading-tight mb-6 text-white">
+        Berhenti Jadi <span class="text-rose-400 underline decoration-rose-500/40">Pembayar Bil</span>.<br />
+        Tukar Simkad Jadi <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-amber-300 bg-clip-text text-transparent">Mesin Jana Pendapatan!</span>
       </h1>
-      
-      <p class="text-slate-300 text-base md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
-        Gunakan pelan data gergasi sehingga <strong>300GB–999GB</strong> dengan panggilan tanpa had, sambil membina royalti tunai setiap kali rakan anda topup. Modal hanya <span class="text-amber-400 font-bold">RM10</span>!
+
+      <p class="text-slate-300 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
+        Gunakan data besar <strong>300GB – 999GB</strong> dengan panggilan tanpa had serendah RM35, sambil bina royalti tunai setiap kali rangkaian anda topup. Modal mula serendah <span class="text-amber-300 font-bold">RM10</span> sahaja!
       </p>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="#daftar" class="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-pink-600/30 text-lg transition duration-200 transform hover:-translate-y-0.5 text-center">
-          🚀 Mula Jana Pasif Income Hari Ini
+      <div class="flex flex-col sm:flex-row gap-3.5 justify-center items-center">
+        <a href="#daftar" class="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-pink-600/25 text-base sm:text-lg transition transform hover:-translate-y-0.5 text-center">
+          🚀 Mula Jana Pendapatan Pasif
         </a>
-        <a href="#kelebihan" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 border border-slate-700 font-semibold px-6 py-4 rounded-xl transition duration-200 text-center">
-          Lihat Pakej & Pelan
+        <a href="#pelan" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-6 py-4 rounded-xl transition text-center text-base">
+          Lihat Pakej Data
         </a>
       </div>
 
-      <!-- VIDEO PREVIEW JIKA ADA -->
-      <div class="mt-12 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl max-w-2xl mx-auto bg-black/50">
-        <video loop muted autoplay playsinline preload="auto" class="w-full max-h-[380px] object-cover">
+      <!-- VIDEO Sedia Ada -->
+      <div class="mt-12 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl max-w-2xl mx-auto bg-black/60 aspect-video">
+        <video loop muted autoplay playsinline preload="auto" class="w-full h-full object-cover">
           <source src="videos/eastel-emotion.mp4" type="video/mp4">
         </video>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- PAIN POINT VS SOLUTION (KENAPA EASTEL) -->
-  <section class="py-16 px-6 bg-slate-900 border-t border-b border-slate-800">
+  <!-- SEKSYEN PERBANDINGAN: REALITI VS PELUANG -->
+  <section class="py-16 px-5 bg-slate-900/90 border-y border-slate-800">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">Berapa Lama Lagi Anda Rela Rugi Setiap Bulan?</h2>
-        <p class="text-slate-400 max-w-xl mx-auto">Kira semula berapa ribu ringgit yang telah anda belanjakan untuk topup sejak mula guna telefon pintar.</p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3">Berapa Lama Lagi Anda Rela Rugi Setiap Bulan?</h2>
+        <p class="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">Kira berapa ribu ringgit yang telah anda belanjakan untuk bil telefon sejak mula memakai telefon pintar.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 gap-6">
         <!-- SIM BIASA -->
-        <div class="bg-slate-950/60 p-8 rounded-2xl border border-rose-950/40 relative">
-          <div class="text-rose-500 font-bold text-sm uppercase tracking-wider mb-2">Simkad Telco Biasa</div>
-          <h3 class="text-xl font-bold text-slate-200 mb-4">Liabiliti Hangus Bulanan</h3>
-          <ul class="space-y-3 text-slate-400 text-sm">
-            <li class="flex items-start gap-2">❌ Bayar RM50–RM100 sebulan tapi duit hilang begitu saja.</li>
-            <li class="flex items-start gap-2">❌ Kuota disekat, kelajuan diturunkan (FUP ketat).</li>
-            <li class="flex items-start gap-2">❌ Rekomen kepada keluarga atau kawan, telco dapat untung, anda dapat RM0.</li>
-            <li class="flex items-start gap-2">❌ Ada rekod blacklist? Sukar lulus permohonan pelan baharu.</li>
-          </ul>
+        <div class="bg-slate-950 p-7 rounded-2xl border border-rose-950/60 flex flex-col justify-between">
+          <div>
+            <span class="text-rose-500 font-bold text-xs uppercase tracking-wider bg-rose-950/30 px-3 py-1 rounded-full">Simkad Telco Biasa</span>
+            <h3 class="text-lg sm:text-xl font-bold text-slate-200 mt-4 mb-4">Liabiliti & Belanja Hangus</h3>
+            <ul class="space-y-3.5 text-slate-400 text-sm">
+              <li class="flex items-start gap-2.5">
+                <span class="text-rose-500 font-bold">✕</span>
+                <span>Bayar RM50 – RM100 setiap bulan tanpa sebarang pulangan tunai.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-rose-500 font-bold">✕</span>
+                <span>Kuota disekat & kelajuan diturunkan (FUP ketat) sewaktu kecemasan.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-rose-500 font-bold">✕</span>
+                <span>Rekomen kepada ahli keluarga atau kawan, syarikat telco yang kaya, anda dapat RM0.</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- SIM EASTEL -->
-        <div class="bg-gradient-to-b from-purple-950/40 to-slate-950 p-8 rounded-2xl border border-purple-500/30 relative">
-          <div class="text-pink-400 font-bold text-sm uppercase tracking-wider mb-2">Simkad Eastel Malaysia</div>
-          <h3 class="text-xl font-bold text-white mb-4">Aset Digital Berulang</h3>
-          <ul class="space-y-3 text-slate-300 text-sm">
-            <li class="flex items-start gap-2">✅ Modal serendah RM10 sahaja untuk aktifkan bisnes telco anda.</li>
-            <li class="flex items-start gap-2">✅ Pelan serendah RM35 dapat 300GB (200GB + 100GB Hotspot).</li>
-            <li class="flex items-start gap-2">✅ Komisen sehingga 3-Tier (13% - 3% - 8%) setiap kali downline topup.</li>
-            <li class="flex items-start gap-2">✅ Blacklist diterima, tiada kontrak terikat, dan patuh Syariah.</li>
-          </ul>
+        <div class="bg-gradient-to-b from-purple-950/30 to-slate-950 p-7 rounded-2xl border border-purple-500/40 flex flex-col justify-between relative shadow-xl shadow-purple-950/20">
+          <div>
+            <span class="text-purple-400 font-bold text-xs uppercase tracking-wider bg-purple-900/40 px-3 py-1 rounded-full">Simkad Eastel Malaysia</span>
+            <h3 class="text-lg sm:text-xl font-bold text-white mt-4 mb-4">Aset & Pelindung Poket</h3>
+            <ul class="space-y-3.5 text-slate-200 text-sm">
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Modal dealer serendah RM10 sahaja — tiada syarat modal besar.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Data melimpah: RM35 dapat 300GB (200GB utama + 100GB hotspot).</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Komisen 3-Aras (13% - 3% - 8%) masuk terus setiap kali kenalan anda buat topup.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Nama blacklist (CTOS/CCRIS) diterima. Nombor lama boleh dikekalkan (MNP).</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PAKEJ & PELAN INTERNET -->
-  <section id="kelebihan" class="py-20 px-6 max-w-6xl mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Pelan Data 5G Menggegar Pasaran</h2>
-      <p class="text-slate-400">Pakej mampu milik yang sangat mudah untuk anda pasarkan kepada sesiapa sahaja.</p>
+  <section id="pelan" class="py-16 px-5 max-w-6xl mx-auto">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl font-extrabold text-white mb-3">Pilihan Pelan 5G Terhangat</h2>
+      <p class="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">Pakej data mampu milik yang amat mudah dijual kerana nilainya yang jauh lebih berbaloi.</p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- EZ35 -->
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-purple-500 transition duration-300 flex flex-col justify-between">
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-purple-500/60 transition duration-300">
         <div>
-          <span class="bg-purple-900/60 text-purple-300 text-xs font-bold px-3 py-1 rounded-full">Paling Popular</span>
+          <span class="bg-purple-950 text-purple-300 border border-purple-500/30 text-xs font-bold px-3 py-1 rounded-full">Paling Laris</span>
           <h3 class="text-2xl font-bold text-white mt-4">Pelan EZ35</h3>
           <div class="mt-2 mb-6">
             <span class="text-4xl font-extrabold text-white">RM35</span>
             <span class="text-slate-400 text-sm">/ 30 Hari</span>
           </div>
           <ul class="space-y-3 text-sm text-slate-300">
-            <li class="flex items-center gap-2">🚀 <strong>300GB</strong> Data Berkelajuan Tinggi</li>
-            <li class="flex items-center gap-2">📶 200GB Utama + 100GB Hotspot</li>
-            <li class="flex items-center gap-2">📞 Panggilan Tanpa Had (Semua Rangkaian)</li>
-            <li class="flex items-center gap-2">🔁 Data boleh dibawa ke depan (Carry Forward)</li>
+            <li class="flex items-center gap-2">🚀 <strong>300GB</strong> Kuota Keseluruhan</li>
+            <li class="flex items-center gap-2">📶 200GB Data Utama + 100GB Hotspot</li>
+            <li class="flex items-center gap-2">📞 Panggilan Tanpa Had Semua Telco</li>
+            <li class="flex items-center gap-2">🔁 Boleh Carry Forward Baki Kuota</li>
           </ul>
         </div>
-        <a href="#daftar" class="mt-8 block text-center bg-purple-600/30 hover:bg-purple-600 text-purple-200 hover:text-white py-2.5 rounded-xl font-semibold border border-purple-500/40 transition">Pilih Pelan Ini</a>
+        <a href="#daftar" class="mt-8 block text-center bg-purple-900/40 hover:bg-purple-600 text-purple-200 hover:text-white py-3 rounded-xl font-semibold border border-purple-500/30 transition text-sm">Pilih EZ35</a>
       </div>
 
       <!-- EZ50 -->
-      <div class="bg-gradient-to-b from-purple-900/30 to-slate-900 border-2 border-pink-500/60 rounded-2xl p-6 shadow-xl shadow-pink-900/20 relative flex flex-col justify-between">
+      <div class="bg-gradient-to-b from-purple-950/40 to-slate-900 border-2 border-pink-500/70 rounded-2xl p-6 flex flex-col justify-between shadow-xl shadow-pink-950/30 relative">
+        <div class="absolute -top-3.5 right-6 bg-pink-600 text-white text-[11px] uppercase tracking-wider font-extrabold px-3 py-0.5 rounded-full">
+          Cadangan Utama
+        </div>
         <div>
-          <span class="bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">Pilihan Gamer & Streamer</span>
+          <span class="bg-pink-950 text-pink-300 border border-pink-500/30 text-xs font-bold px-3 py-1 rounded-full">Heavy Streamer</span>
           <h3 class="text-2xl font-bold text-white mt-4">Pelan EZ50</h3>
           <div class="mt-2 mb-6">
             <span class="text-4xl font-extrabold text-white">RM50</span>
             <span class="text-slate-400 text-sm">/ 30 Hari</span>
           </div>
-          <ul class="space-y-3 text-sm text-slate-300">
-            <li class="flex items-center gap-2">🚀 <strong>500GB</strong> Kuota Ultra 5G</li>
-            <li class="flex items-center gap-2">📞 Panggilan Tanpa Had</li>
+          <ul class="space-y-3 text-sm text-slate-200">
+            <li class="flex items-center gap-2">🚀 <strong>500GB</strong> Kuota Ultra 5G/4G</li>
+            <li class="flex items-center gap-2">📞 Panggilan Tanpa Had Semua Rangkaian</li>
             <li class="flex items-center gap-2">✈️ <strong>Percuma Roaming 3GB</strong> (ID, SG, TH)</li>
-            <li class="flex items-center gap-2">⚡ Sesuai untuk heavy user & bisnes online</li>
+            <li class="flex items-center gap-2">⚡ Sesuai untuk usahawan online & gamer</li>
           </ul>
         </div>
-        <a href="#daftar" class="mt-8 block text-center bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-95 text-white py-2.5 rounded-xl font-semibold transition shadow-lg">Daftar Sekarang</a>
+        <a href="#daftar" class="mt-8 block text-center bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-95 text-white py-3 rounded-xl font-bold transition shadow-md text-sm">Daftar Pelan Ini</a>
       </div>
 
-      <!-- EZ68 / EZ98 -->
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-purple-500 transition duration-300 flex flex-col justify-between">
+      <!-- EZ98 -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-purple-500/60 transition duration-300">
         <div>
-          <span class="bg-slate-800 text-slate-300 text-xs font-bold px-3 py-1 rounded-full">Maksimum Tanpa Had</span>
+          <span class="bg-slate-800 text-slate-300 text-xs font-bold px-3 py-1 rounded-full">Pengganti WiFi Rumah</span>
           <h3 class="text-2xl font-bold text-white mt-4">Pelan EZ98</h3>
           <div class="mt-2 mb-6">
             <span class="text-4xl font-extrabold text-white">RM98</span>
             <span class="text-slate-400 text-sm">/ 30 Hari</span>
           </div>
           <ul class="space-y-3 text-sm text-slate-300">
-            <li class="flex items-center gap-2">🚀 <strong>999GB</strong> Data 5G Tanpa Fikir</li>
+            <li class="flex items-center gap-2">🚀 <strong>999GB</strong> Data 5G Tanpa Risau</li>
             <li class="flex items-center gap-2">📞 Panggilan Tanpa Had</li>
             <li class="flex items-center gap-2">✈️ <strong>Percuma Roaming 10GB</strong> (ID, SG, TH)</li>
-            <li class="flex items-center gap-2">💼 Sesuai untuk pengganti WiFi rumah</li>
+            <li class="flex items-center gap-2">💻 Boleh kongsi seisi keluarga melalui hotspot</li>
           </ul>
         </div>
-        <a href="#daftar" class="mt-8 block text-center bg-purple-600/30 hover:bg-purple-600 text-purple-200 hover:text-white py-2.5 rounded-xl font-semibold border border-purple-500/40 transition">Pilih Pelan Ini</a>
+        <a href="#daftar" class="mt-8 block text-center bg-purple-900/40 hover:bg-purple-600 text-purple-200 hover:text-white py-3 rounded-xl font-semibold border border-purple-500/30 transition text-sm">Pilih EZ98</a>
       </div>
     </div>
   </section>
 
-  <!-- BAGAIMANA SISTEM KOMISEN BEKERJA -->
-  <section class="py-16 px-6 bg-slate-900/60 border-t border-slate-800">
+  <!-- CARA JANA PENDAPATAN PASIF -->
+  <section class="py-16 px-5 bg-slate-900/70 border-t border-slate-800">
     <div class="max-w-4xl mx-auto text-center mb-12">
-      <h2 class="text-3xl font-extrabold text-white mb-4">Bagaimana Anda Menjana Pendapatan Pasif?</h2>
-      <p class="text-slate-400">Konsepnya mudah: Pengguna telefon tak perlu dipaksa topup. Mereka akan topup sendiri setiap bulan untuk guna internet.</p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3">Bagaimana Anda Menjana Duit Bersama Eastel?</h2>
+      <p class="text-slate-400 text-sm sm:text-base">Pengguna telefon tidak perlu diingatkan untuk membeli data. Mereka akan topup sendiri secara automatik setiap bulan.</p>
     </div>
 
     <div class="max-w-4xl mx-auto grid sm:grid-cols-3 gap-6">
-      <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 text-center">
-        <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">1</div>
+      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
+        <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center font-extrabold text-xl mx-auto mb-4 border border-purple-500/30">1</div>
         <h3 class="text-lg font-bold text-white mb-2">Beli Simkad RM10</h3>
-        <p class="text-slate-400 text-sm">Aktifkan simkad Eastel dan anda secara automatik bergelar Dealer berdaftar.</p>
+        <p class="text-slate-400 text-xs sm:text-sm">Daftar diri dan anda secara automatik layak bergelar Dealer berdaftar.</p>
       </div>
 
-      <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 text-center">
-        <div class="w-12 h-12 bg-pink-600/20 text-pink-400 rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">2</div>
-        <h3 class="text-lg font-bold text-white mb-2">Kongsi Link / Simkad</h3>
-        <p class="text-slate-400 text-sm">Bantu kenalan tukar ke pelan lebih murah & jimat. Anda dapat bonus aktivasi terus ke akaun.</p>
+      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
+        <div class="w-12 h-12 bg-pink-600/20 text-pink-400 rounded-full flex items-center justify-center font-extrabold text-xl mx-auto mb-4 border border-pink-500/30">2</div>
+        <h3 class="text-lg font-bold text-white mb-2">Kongsi Penjimatan</h3>
+        <p class="text-slate-400 text-xs sm:text-sm">Bantu rakan atau keluarga beralih kepada pelan murah 300GB. Terima insentif tunai setiap aktivasi.</p>
       </div>
 
-      <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 text-center">
-        <div class="w-12 h-12 bg-emerald-600/20 text-emerald-400 rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">3</div>
+      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
+        <div class="w-12 h-12 bg-emerald-600/20 text-emerald-400 rounded-full flex items-center justify-center font-extrabold text-xl mx-auto mb-4 border border-emerald-500/30">3</div>
         <h3 class="text-lg font-bold text-white mb-2">Royalti Berulang</h3>
-        <p class="text-slate-400 text-sm">Terima komisen 3 aras (13%, 3%, 8%) setiap bulan selagi mereka kekal aktif topup!</p>
+        <p class="text-slate-400 text-xs sm:text-sm">Nikmati komisen 3 Aras (13%, 3%, 8%) setiap kali mereka topup untuk bulan-bulan seterusnya.</p>
       </div>
     </div>
   </section>
 
   <!-- KOMUNITI & SOKONGAN -->
-  <section class="py-16 px-6 max-w-5xl mx-auto">
+  <section class="py-16 px-5 max-w-5xl mx-auto">
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <div class="inline-block bg-purple-900/50 text-purple-300 text-xs font-bold px-3 py-1 rounded-full mb-3">Eastel Community Support</div>
-        <h2 class="text-3xl font-extrabold text-white mb-4">Anda Tidak Bergerak Sendirian</h2>
-        <p class="text-slate-300 mb-6 leading-relaxed">
-          Ramai takut berniaga kerana tidak tahu cara menjual. Dalam <strong>Eastel Community Malaysia</strong>, kami sediakan ekosistem lengkap untuk pastikan anda bermula dengan yakin:
+        <span class="text-purple-400 text-xs font-bold uppercase tracking-wider bg-purple-950 px-3 py-1 rounded-full border border-purple-800/40">Sistem Sokongan Penuh</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-4 mb-4">Anda Tidak Bergerak Sendirian</h2>
+        <p class="text-slate-300 text-sm sm:text-base mb-6 leading-relaxed">
+          Ramai takut berniaga kerana tiada bimbingan. Di <strong>Eastel Community Malaysia</strong>, anda terus dibekalkan sistem lengkap untuk bermula:
         </p>
-        <ul class="space-y-3 text-slate-300 text-sm">
-          <li class="flex items-center gap-3">✅ <strong>Group Bimbingan WhatsApp & Telegram:</strong> Panduan langkah demi langkah dari leader telco berpengalaman.</li>
-          <li class="flex items-center gap-3">✅ <strong>Bahan Pemasaran Disediakan:</strong> Gambar, video, dan skrip copywriting siap untuk anda salin & tampal.</li>
-          <li class="flex items-center gap-3">✅ <strong>E-Link Pendaftaran Auto:</strong> Setiap ahli dibekalkan pautan khas untuk memudahkan prospek mendaftar secara dalam talian.</li>
+        <ul class="space-y-3.5 text-slate-300 text-sm">
+          <li class="flex items-start gap-3">
+            <span class="text-emerald-400 font-bold mt-0.5">✓</span>
+            <div><strong>Group Bimbingan WhatsApp & Telegram:</strong> Panduan terus daripada leader telco berpengalaman.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-emerald-400 font-bold mt-0.5">✓</span>
+            <div><strong>Bahan Pemasaran Siap Pakai:</strong> Gambar grafik berkualiti, video promosi, serta skrip jualan yang sedia disalin dan ditampal.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-emerald-400 font-bold mt-0.5">✓</span>
+            <div><strong>Sistem Link Affiliate:</strong> Urusan pendaftaran prospek anda direkod secara tersusun secara online.</div>
+          </li>
         </ul>
       </div>
       <div>
@@ -227,45 +266,46 @@
     </div>
   </section>
 
-  <!-- BORANG PENDAFTARAN / LEAD FORM -->
-  <section id="daftar" class="py-20 px-6 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-800">
-    <div class="max-w-xl mx-auto bg-slate-900/90 border border-purple-500/40 p-8 sm:p-10 rounded-3xl shadow-2xl shadow-purple-950/50 relative">
+  <!-- BORANG PENDAFTARAN (MENGGANTIKAN DASHBOARD KOSONG) -->
+  <section id="daftar" class="py-16 px-5 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-800">
+    <div class="max-w-xl mx-auto bg-slate-900 border border-purple-500/40 p-7 sm:p-10 rounded-3xl shadow-2xl relative">
       <div class="text-center mb-8">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">Tempah Simkad / Sertai Team Kami</h2>
-        <p class="text-slate-400 text-sm">Isi maklumat ringkas di bawah. Pasukan Eastel Community akan menghubungi anda untuk panduan pendaftaran segera.</p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">Daftar & Mula Sekarang</h2>
+        <p class="text-slate-400 text-xs sm:text-sm">Isi butiran ringkas di bawah. Anda akan dibawa terus ke WhatsApp admin untuk pengaktifan simkad.</p>
       </div>
 
       <form id="leadForm" class="space-y-4">
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Nama Penuh</label>
-          <input type="text" id="nama" required placeholder="Contoh: Ahmad Razif" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition" />
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">Nama Penuh</label>
+          <input type="text" id="nama" required placeholder="Contoh: Mohd Firdaus" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-purple-500 transition" />
         </div>
 
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Nombor WhatsApp / Telefon</label>
-          <input type="tel" id="telefon" required placeholder="Contoh: 0123456789" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition" />
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">Nombor WhatsApp</label>
+          <input type="tel" id="telefon" required placeholder="Contoh: 0112345678" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-purple-500 transition" />
         </div>
 
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Hasrat Penyertaan</label>
-          <select id="hasrat" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition">
-            <option value="Dealer & Bisnes (RM10)">Saya Nak Jadi Dealer & Buat Pendapatan Pasif</option>
-            <option value="Pengguna Sahaja">Saya Nak Beli Simkad Untuk Kegunaan Data Sahaja</option>
-            <option value="Info Lanjut">Saya Nak Maklumat Lanjut Terlebih Dahulu</option>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">Pilihan Pakej / Hasrat</label>
+          <select id="pilihan" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-purple-500 transition">
+            <option value="Daftar Dealer (RM10)">Daftar Sebagai Dealer (RM10 - Bina Pasif Income)</option>
+            <option value="Pelan EZ35 (300GB)">Beli Simkad Pelan EZ35 (RM35 / 300GB)</option>
+            <option value="Pelan EZ50 (500GB)">Beli Simkad Pelan EZ50 (RM50 / 500GB)</option>
+            <option value="Pertanyaan Info">Saya Nak Bertanya Maklumat Lanjut Dahulu</option>
           </select>
         </div>
 
-        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-pink-600/30 text-base transition duration-200 transform hover:-translate-y-0.5">
-          Hantar Maklumat Saya ➔
+        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-pink-600/30 text-base transition transform hover:-translate-y-0.5 mt-2">
+          Hantar & Berhubung di WhatsApp ➔
         </button>
       </form>
 
-      <!-- NOTIS SELEPAS HANTAR -->
-      <div id="successMsg" class="hidden text-center py-6">
-        <div class="text-4xl mb-3">🎉</div>
-        <h3 class="text-xl font-bold text-white mb-2">Terima Kasih!</h3>
-        <p class="text-slate-300 text-sm mb-4">Maklumat anda telah diterima. Anda boleh terus hubungi admin untuk pengaktifan ekspres:</p>
-        <a id="waDirectBtn" href="https://wa.me/601XXXXXXXX?text=Salam%20Admin%20Eastel,%20saya%20baru%20hantar%20form%20dan%20nak%20aktifkan%20simkad" target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition">
+      <!-- Paparan Notis Pengesahan Selepas Hantar -->
+      <div id="statusSukses" class="hidden text-center py-6">
+        <div class="text-4xl mb-2">🎉</div>
+        <h3 class="text-xl font-bold text-white mb-2">Maklumat Berjaya Dihantar!</h3>
+        <p class="text-slate-300 text-sm mb-5">Sila klik butang di bawah jika aplikasi WhatsApp anda tidak dibuka secara automatik:</p>
+        <a id="btnBukaWA" href="#" target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition">
           Terus Chat Admin di WhatsApp 💬
         </a>
       </div>
@@ -273,44 +313,51 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-10 text-center text-slate-500 text-xs border-t border-slate-900 bg-slate-950">
+  <footer class="py-8 text-center text-slate-500 text-xs border-t border-slate-900 bg-slate-950 px-5">
     <p class="mb-2">© 2026 Eastel Community Malaysia. Hak Cipta Terpelihara.</p>
-    <p>Eastel adalah Operator Rangkaian Maya Mudah Alih (MVNO) berlesen di bawah Anchor Communications Sdn. Bhd. dengan kerjasama rangkaian U Mobile 4G/5G.</p>
+    <p class="max-w-xl mx-auto leading-relaxed">Eastel merupakan jenama telekomunikasi MVNO berlesen di bawah kawal selia SKMM, beroperasi atas liputan rangkaian 5G U Mobile.</p>
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/601XXXXXXXX?text=Salam%20Eastel%20Community,%20saya%20berminat%20nak%20tahu%20tentang%20simkad%20dan%20bisnes%20Eastel" target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl shadow-emerald-900/50 flex items-center justify-center transition transform hover:scale-110 z-50">
+  <a id="floatingWA" href="#" target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl shadow-emerald-950/60 flex items-center justify-center transition transform hover:scale-110 z-50">
     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
       <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
     </svg>
   </a>
 
-  <!-- SCRIPT UNTUK SIMULASI BORANG & WHATSAPP REDIRECT -->
+  <!-- LOGIK BORANG KE WHATSAPP -->
   <script>
+    // ==========================================
+    // MASUKKAN NOMBOR WHATSAPP ADMIN ANDA DI SINI
+    // Contoh: "60123456789" (tanpa simbol + atau sengkang)
+    // ==========================================
+    const NOMBOR_ADMIN = "60123456789";
+
+    // Tetapkan pautan awal floating WhatsApp
+    document.getElementById('floatingWA').href = `https://wa.me/${NOMBOR_ADMIN}?text=${encodeURIComponent("Salam Admin Eastel, saya berminat nak tahu maklumat lanjut.")}`;
+
     const form = document.getElementById('leadForm');
-    const successMsg = document.getElementById('successMsg');
-    const waBtn = document.getElementById('waDirectBtn');
-    
-    // GANTIKAN NOMBOR INI DENGAN NOMBOR WHATSAPP ADMIN ANDA
-    const ADMIN_PHONE = "601XXXXXXXX"; 
+    const statusSukses = document.getElementById('statusSukses');
+    const btnBukaWA = document.getElementById('btnBukaWA');
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      const nama = document.getElementById('nama').value;
-      const telefon = document.getElementById('telefon').value;
-      const hasrat = document.getElementById('hasrat').value;
+      
+      const nama = document.getElementById('nama').value.trim();
+      const telefon = document.getElementById('telefon').value.trim();
+      const pilihan = document.getElementById('pilihan').value;
 
-      const waText = encodeURIComponent(`Salam Admin Eastel, saya berminat mendaftar!\n\nNama: ${nama}\nNo Tel: ${telefon}\nHasrat: ${hasrat}`);
-      const waUrl = `https://wa.me/${ADMIN_PHONE}?text=${waText}`;
+      const mesej = `Salam Admin Eastel Community Malaysia,%0A%0ASaya berminat untuk mendaftar:%0A👤 *Nama:* ${encodeURIComponent(nama)}%0A📱 *No Telefon:* ${encodeURIComponent(telefon)}%0A🎯 *Pakej/Pilihan:* ${encodeURIComponent(pilihan)}%0A%0AMohon panduan untuk tindakan seterusnya. Terima kasih!`;
+      const urlWA = `https://wa.me/${NOMBOR_ADMIN}?text=${mesej}`;
 
-      waBtn.href = waUrl;
+      btnBukaWA.href = urlWA;
       form.classList.add('hidden');
-      successMsg.classList.remove('hidden');
+      statusSukses.classList.remove('hidden');
 
-      // Automatik buka WhatsApp selepas 1.5 saat
+      // Buka tetingkap WhatsApp secara automatik
       setTimeout(() => {
-        window.open(waUrl, '_blank');
-      }, 1500);
+        window.open(urlWA, '_blank');
+      }, 600);
     });
   </script>
 </body>
