@@ -74,17 +74,23 @@
         </a>
       </div>
 
-      <!-- VIDEO BESERTA BUTANG UNMUTE -->
-      <div class="relative mt-12 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl max-w-2xl mx-auto bg-black/60 aspect-video group">
-        <video id="eastelVideo" loop muted autoplay playsinline preload="auto" class="w-full h-full object-cover">
-          <source src="videos/eastel-emotion.mp4" type="video/mp4">
-        </video>
+      <!-- AREA VIDEO DAN TOMBOL BUKA SUARA -->
+      <div class="mt-12 max-w-2xl mx-auto">
+        <!-- Bingkai Pemutar Video -->
+        <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-black aspect-video">
+          <video id="eastelVideo" loop muted autoplay playsinline controls preload="auto" class="w-full h-full object-cover">
+            <source src="videos/eastel-emotion.mp4" type="video/mp4">
+          </video>
+        </div>
 
-        <!-- Butang Unmute / Suara Video -->
-        <button id="unmuteBtn" type="button" class="absolute bottom-4 right-4 z-20 flex items-center gap-2 bg-slate-900/90 hover:bg-purple-600 text-white text-xs sm:text-sm font-bold py-2 px-4 rounded-full border border-purple-400/50 shadow-xl backdrop-blur-md transition-all duration-200">
-          <span id="soundIcon">🔊</span>
-          <span id="soundText">Buka Suara Video</span>
-        </button>
+        <!-- Tombol Buka Suara (Ditempatkan di Luar Kontainer Video Agar Selalu Terlihat) -->
+        <div class="mt-4 flex flex-col items-center justify-center">
+          <button id="unmuteBtn" type="button" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-amber-400 via-pink-500 to-purple-600 hover:opacity-95 text-slate-950 font-black px-8 py-3.5 rounded-full shadow-xl shadow-pink-600/30 text-sm sm:text-base transition transform hover:scale-105 active:scale-95 cursor-pointer">
+            <span id="soundIcon" class="text-xl">🔊</span>
+            <span id="soundText" class="font-extrabold tracking-wide">KLIK UNTUK AKTIFKAN SUARA VIDEO</span>
+          </button>
+          <p class="text-xs text-slate-400 mt-2">Atau gunakan ikon speaker langsung pada layar video di atas.</p>
+        </div>
       </div>
     </div>
   </header>
@@ -219,7 +225,7 @@
     </div>
   </section>
 
-  <!-- KISAH LEADER (GUNA image/leaders.png) -->
+  <!-- KISAH LEADER (MENGGUNAKAN image/leaders.png) -->
   <section class="py-16 px-5 bg-slate-900/70 border-t border-slate-800">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12">
@@ -270,7 +276,7 @@
           </div>
 
           <p class="text-xs text-slate-400 italic pt-1">
-            💡 Hubungi admin kami di talian <strong>011-71608373</strong> untuk mendapatkan panduan pendaftaran Dealer secara eksklusif.
+            💡 Hubungi admin kami di talian <strong>011-71608373</strong> untuk mendapatkan panduan pendaftaran Dealer secara langsung.
           </p>
         </div>
       </div>
@@ -321,7 +327,7 @@
 
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">Nombor WhatsApp Anda</label>
-          <input type="tel" id="telefon" required placeholder="Contoh: 0123456789" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-purple-500 transition" />
+          <input type="tel" id="telefon" required placeholder="Contoh: 01171608373" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-purple-500 transition" />
         </div>
 
         <div>
@@ -334,7 +340,7 @@
           </select>
         </div>
 
-        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-pink-600/30 text-base transition transform hover:-translate-y-0.5 mt-2">
+        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-pink-600/30 text-base transition transform hover:-translate-y-0.5 mt-2 cursor-pointer">
           Hantar & Berhubung di WhatsApp ➔
         </button>
       </form>
@@ -357,66 +363,68 @@
     <p class="max-w-xl mx-auto leading-relaxed">Eastel merupakan jenama telekomunikasi MVNO berlesen di bawah kawal selia SKMM, beroperasi atas liputan rangkaian 5G U Mobile. Hubungi admin: 011-71608373.</p>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON (Nomor WhatsApp: 01171608373) -->
+  <!-- FLOATING WHATSAPP BUTTON -->
   <a id="floatingWA" href="https://wa.me/601171608373?text=Salam%20Admin%20Eastel,%20saya%20berminat%20nak%20tahu%20maklumat%20lanjut%20mengenai%20simkad%20dan%20peluang%20bisnes" target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl shadow-emerald-950/60 flex items-center justify-center transition transform hover:scale-110 z-50">
     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
       <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
     </svg>
   </a>
 
-  <!-- LOGIK BORANG KE WHATSAPP & TOGGLE SUARA VIDEO -->
+  <!-- SCRIPT LOGIKA PENGATUR SUARA VIDEO DAN FORMULIR -->
   <script>
     const NOMBOR_ADMIN = "601171608373";
 
-    // Pautan Floating WhatsApp
-    document.getElementById('floatingWA').href = `https://wa.me/${NOMBOR_ADMIN}?text=${encodeURIComponent("Salam Admin Eastel, saya berminat nak tahu maklumat lanjut mengenai simkad dan peluang bisnes.")}`;
-
-    // Fungsi Toggle Unmute / Senyapkan Suara Video
+    // Tombol Unmute / Buka Suara Video
     const video = document.getElementById('eastelVideo');
     const unmuteBtn = document.getElementById('unmuteBtn');
     const soundIcon = document.getElementById('soundIcon');
     const soundText = document.getElementById('soundText');
 
-    unmuteBtn.addEventListener('click', function() {
-      if (video.muted) {
-        video.muted = false;
-        video.play();
-        soundIcon.textContent = '🔇';
-        soundText.textContent = 'Senyapkan Suara';
-        unmuteBtn.classList.remove('bg-slate-900/90');
-        unmuteBtn.classList.add('bg-purple-600');
-      } else {
-        video.muted = true;
-        soundIcon.textContent = '🔊';
-        soundText.textContent = 'Buka Suara Video';
-        unmuteBtn.classList.remove('bg-purple-600');
-        unmuteBtn.classList.add('bg-slate-900/90');
-      }
-    });
+    if (unmuteBtn && video) {
+      unmuteBtn.addEventListener('click', function () {
+        if (video.muted) {
+          video.muted = false;
+          video.volume = 1.0;
+          video.play();
+          soundIcon.textContent = '🔇';
+          soundText.textContent = 'SENYAPKAN SUARA VIDEO';
+          unmuteBtn.classList.remove('text-slate-950');
+          unmuteBtn.classList.add('text-white');
+        } else {
+          video.muted = true;
+          soundIcon.textContent = '🔊';
+          soundText.textContent = 'KLIK UNTUK AKTIFKAN SUARA VIDEO';
+          unmuteBtn.classList.remove('text-white');
+          unmuteBtn.classList.add('text-slate-950');
+        }
+      });
+    }
 
-    // Logik Penghantaran Borang ke WhatsApp
+    // Penanganan Formulir WhatsApp
     const form = document.getElementById('leadForm');
     const statusSukses = document.getElementById('statusSukses');
     const btnBukaWA = document.getElementById('btnBukaWA');
 
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const nama = document.getElementById('nama').value.trim();
-      const telefon = document.getElementById('telefon').value.trim();
-      const pilihan = document.getElementById('pilihan').value;
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nama = document.getElementById('nama').value.trim();
+        const telefon = document.getElementById('telefon').value.trim();
+        const pilihan = document.getElementById('pilihan').value;
 
-      const mesej = `Salam Admin Eastel Community Malaysia,%0A%0ASaya berminat untuk mendaftar:%0A👤 *Nama:* ${encodeURIComponent(nama)}%0A📱 *No Telefon:* ${encodeURIComponent(telefon)}%0A🎯 *Pakej/Pilihan:* ${encodeURIComponent(pilihan)}%0A%0AMohon bantuan pendaftaran. Terima kasih!`;
-      const urlWA = `https://wa.me/${NOMBOR_ADMIN}?text=${mesej}`;
+        const mesej = `Salam Admin Eastel Community Malaysia,%0A%0ASaya berminat untuk mendaftar:%0A👤 *Nama:* ${encodeURIComponent(nama)}%0A📱 *No Telefon:* ${encodeURIComponent(telefon)}%0A🎯 *Pakej/Pilihan:* ${encodeURIComponent(pilihan)}%0A%0AMohon bantuan pendaftaran. Terima kasih!`;
+        const urlWA = `https://wa.me/${NOMBOR_ADMIN}?text=${mesej}`;
 
-      btnBukaWA.href = urlWA;
-      form.classList.add('hidden');
-      statusSukses.classList.remove('hidden');
+        btnBukaWA.href = urlWA;
+        form.classList.add('hidden');
+        statusSukses.classList.remove('hidden');
 
-      setTimeout(() => {
-        window.open(urlWA, '_blank');
-      }, 600);
-    });
+        setTimeout(() => {
+          window.open(urlWA, '_blank');
+        }, 600);
+      });
+    }
   </script>
 </body>
 </html>
